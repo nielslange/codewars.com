@@ -13,7 +13,7 @@ function orderWeight($str) {
 
 	array_multisort($array_value, SORT_ASC, $array_key, SORT_STRING, $array);
 
-  return implode(' ', array_column($array, 'key'));
+	return implode(' ', array_column($array, 'key'));
 }
 
 var_dump(orderWeight("103 123 4444 99 2000")); 													// Expected: 2000 103 123 4444 99
