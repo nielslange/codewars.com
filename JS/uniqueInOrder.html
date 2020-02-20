@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	
+<script>
+
+var uniqueInOrder = function( iterable ) {
+	var sequence = [...iterable];
+	var duplicates = [];
+
+	array.forEach(function(element, index, array) {
+		if ( index != 0 && array[index] == array[index-1] ) {
+			duplicates.push(index);
+		}
+	});
+
+	duplicates.forEach( index => {
+		delete array[index];
+	});
+	
+	return array.filter(Boolean);
+}
+
+
+console.log(uniqueInOrder('AAAABBBCCDAABBB')); // Expected: ['A','B','C','D','A','B']
+console.log(uniqueInOrder('ABBCcAD')); // Expected: ['A', 'B', 'C', 'c', 'A', 'D']
+console.log(uniqueInOrder([1,2,2,3,3])); // Expected: [1,2,3]
+
+</script>
+
+</body>
+</html>
