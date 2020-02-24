@@ -1,6 +1,6 @@
 <?php
 
-function find_uniq(array $array) {
+function find_uniq(array $array): float {
 	sort($array);
 
 	if ( $array[0] === $array[1] ) rsort($array);
